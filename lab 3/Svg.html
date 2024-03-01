@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>svg</title>
+</head>
+<style>
+    
+</style>
+<body>
+    
+
+    <svg width="500" height="500">
+        <circle cx="250" cy="250" r="200" stroke="black" fill="white"/>
+        <circle cx="160" cy="170" r="30" stroke="black" fill="white"/>
+        <circle cx="350" cy="170" r="30" stroke="black" fill="white"/>
+        <circle id="eye1" cx="160" cy="170" r="12" stroke="black" fill="blue"/>
+        <circle id="eye2" cx="350" cy="170" r="12" stroke="black" fill="blue"/>
+
+        <polygon points="250,220 225,300 275,300 250,220" stroke="black" fill="gray"/>
+
+        <!-- <ellipse cx="250" cy="370" rx="55" ry="25" stroke="black" fill="none" style="transform:rotateX(90deg)"/> -->
+        <ellipse cx="250" cy="370" rx="95" ry="35" stroke="black" fill="gray"/>
+      
+    </svg>
+   
+
+    <script>
+        let eye1 = document.getElementById("eye1")
+        let eye2 = document.getElementById("eye2")
+        let nose = document.querySelector("polygon")
+        let mouse = document.querySelector("ellipse")
+        eye1.addEventListener("mouseover",function(){
+            eye1.style.fill="red"
+        })
+        eye2.addEventListener("mouseover",function(){
+            eye2.style.fill="red"
+        })
+        eye1.addEventListener("mouseout",function(){
+            eye1.style.fill="blue"
+        })
+        eye2.addEventListener("mouseout",function(){
+            eye2.style.fill="blue"
+        })
+        nose.addEventListener("mouseover",function(){
+            nose.style.fill="red"
+        })
+        nose.addEventListener("mouseout",function(){
+            nose.style.fill="gray"
+        })
+
+        mouse.addEventListener("mouseover",function(){
+            mouse.style.fill="red"
+        })
+        mouse.addEventListener("mouseout",function(){
+            mouse.style.fill="gray"
+        })
+    </script>
+</body>
+</html>

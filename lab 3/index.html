@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>get Location</button>
+     <p></p>
+
+    <script>
+        let btn = document.querySelector('button');
+        let parg = document.querySelector("p")
+        btn.addEventListener("click", function () {
+            navigator.geolocation.getCurrentPosition(sucess, error)
+          
+            function sucess(position) {
+                let x = position.coords.latitude
+                let y = position.coords.longitude
+                url = `https://www.google.com/maps?q=${x},${y}`
+                window.open(url,'_blank')
+            }
+            function error(errorType) {
+                console.log(errorType)
+                switch(errorType.code){
+                    case errorType.PERMISSION_DENIED:
+                    parg.innerHTML="PERMISSION_DENIED"
+                    break
+                }
+            }
+        })
+
+    </script>
+</body>
+
+</html>

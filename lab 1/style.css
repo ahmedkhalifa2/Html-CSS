@@ -1,0 +1,97 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+header{
+    background-image: url("download.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+   height: 500px;
+   position: relative;
+}
+header img{
+    height: 100%;
+}
+header .Hcontent{
+    color: white;
+    position: absolute;
+    top: 70px;
+    left: 108px;
+    text-align: center;
+}
+header .Hcontent button{
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 5px;
+}
+.about{
+    /* float: left; */
+    padding: 65px;
+    padding-top: 0;
+    margin: 50px 0;
+}
+.about .headAbout{
+    width: 20%;
+    float: left;
+    font-size: 25px;
+    padding-top: 0;
+    margin-top: -10;
+}
+.about .Acontent{
+    width: 75%;
+    float: left;
+}
+.about .Acontent p{
+    line-height: 1.5;
+}
+.about .Acontent button{
+    padding: 8px;
+    background-color: black;
+    border: none;
+    color: white;
+    margin-top: 20px;
+}
+.clr,.clr2{
+    clear: both;
+}
+.portfolio{
+    margin: 30px;
+
+}
+.portfolio h1{
+    font-size: 25px;
+}
+.portfolio .row1 div,.portfolio .row2 div{
+    width: 30%;
+    float: left;
+    background-color: aquamarine;
+    margin-right: 3%;
+    height: 100px;
+    text-align: center;
+   position: relative;
+}
+.portfolio .row1{
+    margin-bottom: 30px;
+}
+.portfolio .row1 p{
+    position: relative;
+ }
+.portfolio .row1 p::after{
+   content: "";
+   width: 80%;
+   height: 2px;
+   position: absolute;
+   background-color: black;
+   bottom: -12px;
+   right: 8px;
+   
+}
+.portfolio .row2{
+    margin-top: 30px;
+}
+.portfolio .row1 div p,.portfolio .row2 div p{
+   position: absolute;
+    top: 30%;
+    left: 38%;
+}

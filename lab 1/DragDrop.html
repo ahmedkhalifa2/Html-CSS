@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag & Drop</title>
+</head>
+<style>
+    li{
+        padding: 5px;
+    }
+    ul{
+        list-style: none;
+    }
+</style>
+<body>
+    <ul id="listContainer"   ondragover="event.preventDefault()" ondragstart="dragedLi(event.target)">
+        <li draggable="true" ondrop="drop(event)">CSS</li>
+        <li draggable="true" ondrop="drop(event)">JavaScript</li>
+        <li draggable="true" ondrop="drop(event)">NodeJs</li>
+        <li draggable="true" ondrop="drop(event)">HTML</li>
+        <li draggable="true" ondrop="drop(event)">React</li>
+    </ul>
+
+    <script>
+    
+        let gragedElement;
+
+        function drop(eve){
+            eve.preventDefault()
+            let swaped = eve.target.innerHTML
+            eve.target.innerHTML = gragedElement.innerHTML
+            gragedElement.innerHTML = swaped
+        }
+
+
+        function dragedLi(ele){
+            gragedElement = ele
+           
+        }
+
+    </script>
+</body>
+</html>
